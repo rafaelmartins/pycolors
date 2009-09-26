@@ -2,7 +2,7 @@
 #
 #       colors.py
 #       
-#       Copyright 2009 Rafael G. Martins <rafael@rafaelmartins.com>
+#       Copyright 2009 Rafael G. Martins <rafael@rafaelmartins.eng.br>
 #       
 #       Redistribution and use in source and binary forms, with or without
 #       modification, are permitted provided that the following conditions are
@@ -32,38 +32,49 @@
 
 """PyColors
 
-Python module to ease the use of colors on programs to run o CLI.
+Python module to ease the use of colors on programs that run on CLI.
 Works fine on Linux or on any Operating System running BaSH or compatibles.
 If the shell's not color compatible, he'll get the raw string.
-The module have predefined some basic colors (white, red, green, yellow, blue),
-but you can use any color, if you know the color code.
+The module have predefined some basic colors, but you can use any color,
+if you know the color code.
 
 Example:
     
     >>> from colors import Color
-    >>> yellow = Color(33)
+    >>> yellow = Color('1;33')
     >>> print yellow('Hello World')
     Hello World
     
     >>> from colors import red
-    >>> print red('Olá Mundo')
+    >>> print red('Ola Mundo')
 
 """
 
 __all__ = [
     'Colors', 'disable_colors', # Main object and function
     
-    # colors
+    # color objects
     'black', 'blue', 'green', 'cyan', 'red', 'purple', 'brown',
     'light_gray', 'dark_gray','light_blue', 'light_green','light_cyan',
     'light_red', 'light_purple', 'yellow', 'white',
 ]
 
+__author__ = 'Rafael Goncalves Martins'
+__email__ = 'rafael@rafaelmartins.eng.br'
+
+__description__ = 'Python module to ease the use of colors on programs that run on CLI'
+__url__ = 'http://projects.rafaelmartins.eng.br/pycolors/'
+__copyright__ = '(c) 2009 %s' % __author__
+__license__ = 'BSD'
+
+__version__ = '0.1'
+
+
 from os import linesep, environ, devnull
 from subprocess import Popen, PIPE
 
 def __has_colors():
-    """_has_colors(): Checks if the shell used supports colors
+    """_has_colors(): Checks if the current shell supports colors
     
     """
     
@@ -106,7 +117,7 @@ class Color(object):
     def __call__(self, string):
         """Callable object, used to return the string with color markup
         or the raw string if colors aren't available on the current
-        shell.
+        shell or are disabled by user.
         
         """
         
