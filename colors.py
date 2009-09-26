@@ -70,7 +70,7 @@ __license__ = 'BSD'
 __version__ = '0.1'
 
 
-from os import linesep, environ, devnull
+from os import linesep, environ
 from subprocess import Popen, PIPE
 
 def __has_colors():
@@ -81,7 +81,7 @@ def __has_colors():
     p = Popen(
         'tput colors',
         stdout = PIPE,
-        stderr = open(devnull, 'w'),
+        stderr = PIPE, # not used, fixes a bug that brokes easy_install
         shell = True
     )
 
