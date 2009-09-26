@@ -67,7 +67,7 @@ __url__ = 'http://projects.rafaelmartins.eng.br/pycolors/'
 __copyright__ = '(c) 2009 %s' % __author__
 __license__ = 'BSD'
 
-__version__ = '0.1'
+__version__ = '0.1.1'
 
 
 from os import linesep, environ
