@@ -51,7 +51,7 @@ Example:
 """
 
 __all__ = [
-    'Colors', 'disable_colors', # Main object and function
+    'Color', 'disable_colors', # Main object and function
     
     # color objects
     'black', 'blue', 'green', 'cyan', 'red', 'purple', 'brown',
