@@ -14,7 +14,7 @@
 #         copyright notice, this list of conditions and the following disclaimer
 #         in the documentation and/or other materials provided with the
 #         distribution.
-#       * Neither the name of the  nor the names of its
+#       * Neither the name of the author nor the names of its
 #         contributors may be used to endorse or promote products derived from
 #         this software without specific prior written permission.
 #       
@@ -70,7 +70,7 @@ __license__ = 'BSD'
 __version__ = '0.1.1'
 
 
-from os import linesep, environ
+from os import environ
 from subprocess import Popen, PIPE
 
 def __has_colors():
