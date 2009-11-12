@@ -1,4 +1,4 @@
 ^(build|dist)/
 \.py[co]$
-^doc/_build/[^(\.keep)]$
+^doc/_build/[^\.]
 ^MANIFEST$
