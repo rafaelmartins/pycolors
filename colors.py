@@ -55,7 +55,7 @@ __all__ = [
     
     # color objects
     'black', 'blue', 'green', 'cyan', 'red', 'purple', 'brown',
-    'light_gray', 'dark_gray','light_blue', 'light_green','light_cyan',
+    'light_gray', 'dark_gray', 'light_blue', 'light_green', 'light_cyan',
     'light_red', 'light_purple', 'yellow', 'white',
 ]
 
