@@ -30,23 +30,27 @@
 #       (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 #       OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-"""PyColors
+"""
 
-Python module to ease the use of colors on programs that run on CLI.
-Works fine on Linux or on any Operating System running BaSH or compatibles.
-If the shell's not color compatible, he'll get the raw string.
-The module have predefined some basic colors, but you can use any color,
-if you know the color code.
-
-Example:
+    Module colors
+    ~~~~~~~~~~~~~~
     
-    >>> from colors import Color
-    >>> yellow = Color('1;33')
-    >>> print yellow('Hello World')
-    Hello World
+    Python module to ease the use of colors on programs that run on CLI.
+    Works fine on Linux and any Operating System running BaSH or compatibles.
+    If the shell's not color compatible, he'll get the raw string.
+    The module have predefined some basic colors, but you can use any color,
+    if you know the color code.
     
-    >>> from colors import red
-    >>> print red('Ola Mundo')
+    Example
+    =======
+        
+        >>> from colors import Color
+        >>> yellow = Color('1;33')
+        >>> print yellow('Hello World')
+        Hello World
+        
+        >>> from colors import red
+        >>> print red('Ola Mundo')
 
 """
 
@@ -74,7 +78,7 @@ from os import environ
 from subprocess import Popen, PIPE
 
 def __has_colors():
-    """_has_colors(): Checks if the current shell supports colors
+    """Checks if the current shell supports colors
     
     """
     
@@ -103,13 +107,13 @@ def disable_colors():
 
 
 class Color(object):
-    """Color: The main object from this module
+    """PyColors main class
     
     """
     
     def __init__(self, color_code):
         """Initialize the color object
-        
+
         """
         
         self.color_code = color_code

@@ -3,7 +3,7 @@
 import warnings
 warnings.filterwarnings('ignore')
 
-from distutils.core import setup
+from setuptools import setup
 import colors
 
 setup(
