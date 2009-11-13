@@ -1,6 +1,5 @@
-
-Welcome to PyColors's documentation!
-====================================
+PyColors's documentation
+========================
 
 .. automodule:: colors
    :members:

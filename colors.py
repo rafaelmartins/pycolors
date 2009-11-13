@@ -1,37 +1,6 @@
 # -*- encoding: utf-8 -*-
-#
-#       colors.py
-#       
-#       Copyright 2009 Rafael G. Martins <rafael@rafaelmartins.eng.br>
-#       
-#       Redistribution and use in source and binary forms, with or without
-#       modification, are permitted provided that the following conditions are
-#       met:
-#       
-#       * Redistributions of source code must retain the above copyright
-#         notice, this list of conditions and the following disclaimer.
-#       * Redistributions in binary form must reproduce the above
-#         copyright notice, this list of conditions and the following disclaimer
-#         in the documentation and/or other materials provided with the
-#         distribution.
-#       * Neither the name of the author nor the names of its
-#         contributors may be used to endorse or promote products derived from
-#         this software without specific prior written permission.
-#       
-#       THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-#       "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-#       LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-#       A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-#       OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-#       SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-#       LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-#       DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-#       THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-#       (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-#       OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 """
-
     Module colors
     ~~~~~~~~~~~~~~
     
@@ -40,10 +9,11 @@
     If the shell's not color compatible, he'll get the raw string.
     The module have predefined some basic colors, but you can use any color,
     if you know the color code.
-    
-    Example
-    =======
-        
+
+
+    Usage example
+    -------------
+
         >>> from colors import Color
         >>> yellow = Color('1;33')
         >>> print yellow('Hello World')
@@ -51,6 +21,25 @@
         
         >>> from colors import red
         >>> print red('Ola Mundo')
+
+
+    Working with this module as an optional dependency
+    --------------------------------------------------
+
+    If you don't want to force the users to have PyColors installed
+    you can make the use of the colors module optional. For example: ::
+    
+        # trying to use colors
+        try:
+            from colors import light_blue, light_red, red, white
+        except:
+            light_blue = light_red = red = white = lambda(x): str(x)
+    
+    With this, if the user don't have the colors module, he'll get the
+    raw strings normally.
+    
+    :copyright: 2009 Rafael Goncalves Martins.
+    :license: BSD, see LICENSE for more details.
 
 """
 
