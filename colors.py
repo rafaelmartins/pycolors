@@ -56,7 +56,7 @@ __author__ = 'Rafael Goncalves Martins'
 __email__ = 'rafael@rafaelmartins.eng.br'
 
 __description__ = 'Python module to ease the use of colors on programs that run on CLI'
-__url__ = 'http://projects.rafaelmartins.eng.br/pycolors/'
+__url__ = 'http://packages.python.org/pycolors/'
 __copyright__ = '(c) 2009 %s' % __author__
 __license__ = 'BSD'
 
