@@ -21,4 +21,4 @@ disable colors setting the environment variable DISABLE_COLORS with any
 value.
 
 You can see the doc reading the module, using pydoc, or visiting my web
-page: http://projects.rafaelmartins.eng.br/pycolors/
+page: https://github.com/rafaelmartins/pycolors
